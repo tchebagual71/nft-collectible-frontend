@@ -3,7 +3,7 @@ import './App.css';
 import contract from './contracts/NFTCollectible.json';
 import { ethers } from 'ethers';
 
-const contractAddress = "0x355638a4eCcb777794257f22f50c289d4189F245";
+const contractAddress = "0x09315999989AcD06DB23c15b57b7483C94C108F4";
 const abi = contract.abi;
 
 function App() {
@@ -95,7 +95,7 @@ function App() {
 
   return (
     <div className='main-app'>
-      <h1>Scrappy Squirrels Tutorial</h1>
+      <h1>Pepefrens</h1>
       <div>
         {currentAccount ? mintNftButton() : connectWalletButton()}
       </div>
