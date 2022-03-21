@@ -8,6 +8,7 @@ const abi = contract.abi;
 
 function App() {
 
+  const [data, setData] = useState();
   const [currentAccount, setCurrentAccount] = useState(null);
 
   const checkWalletIsConnected = async () => {
@@ -58,8 +59,8 @@ function App() {
 
         console.log("Initialize payment");
         let nftTxn = await nftContract.mintNFTs(1, { value: ethers.utils.parseEther("0.01") });
-
-        console.log("Mining... please wait");
+        setData("Mining your pepe chest");
+        console.log("Mining your pepe chest... please wait");
         await nftTxn.wait();
 
         console.log(`Mined, see transaction: https://rinkeby.etherscan.io/tx/${nftTxn.hash}`);
@@ -94,14 +95,24 @@ function App() {
   }, [])
 
   return (
+    
     <div className='main-app'>
-      <h1>PEPEFRENS</h1>
-      <h2>Will you be my fren?</h2>
+                <li className='header'><a href="https://www.pepefrens.com/" target="_blank" rel="noopener noreferrer">Website</a></li>
+                <li className='header'>🐸</li>
+                <li className='header'><a href="https://twitter.com/pepefrensnft" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+                <li className='header'>🐸</li>
+                <li className='header'><a href="https://discord.gg/6HXKdXXZ" target="_blank"rel="noopener noreferrer">Discord</a></li>
+                <li className='header'>🐸</li>
+        
+      <h2 style={{ color: 'darkgreen', fontSize: '60px'}}>Will you be my fren?</h2>
       <div>
         {currentAccount ? mintNftButton() : connectWalletButton()}
       </div>
+      <p><a href="https://opensea.io/account" target="_blank" rel="noopener noreferrer">After minting, click here to see your new Pepefren NFT!</a></p>
+
       <p><img src="../pepe.png" alt="pepe" width="60%"></img></p>
-    </div>
+                
+                </div>
   )
 }
 

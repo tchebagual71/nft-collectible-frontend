@@ -1,7 +1,19 @@
 .main-app {
     text-align: top;
-    margin: 12%;
+    margin: 5%;
 }
+
+.header {
+    position: static;
+    float: right;
+    list-style: none;
+    text-align: center;
+}
+
+.right {
+    float: right;
+}
+
 
 .cta-button {
     padding: 15px;
@@ -21,8 +33,7 @@
     background: darkgreen;
 }
 
-
-  html, body, #app, #app>div {
+html, body, #app, #app>div {
     height: 100%;
     background-image: linear-gradient(to right, pink, lightgreen);
   }
