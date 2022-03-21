@@ -95,10 +95,12 @@ function App() {
 
   return (
     <div className='main-app'>
-      <h1>Pepefrens</h1>
+      <h1>PEPEFRENS</h1>
+      <h2>Will you be my fren?</h2>
       <div>
         {currentAccount ? mintNftButton() : connectWalletButton()}
       </div>
+      <p><img src="../pepe.png" alt="pepe" width="60%"></img></p>
     </div>
   )
 }
