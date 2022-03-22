@@ -3,12 +3,11 @@ import './App.css';
 import contract from './contracts/NFTCollectible.json';
 import { ethers } from 'ethers';
 
-const contractAddress = "0x09315999989AcD06DB23c15b57b7483C94C108F4";
+const contractAddress = "0xbEc7A867e740cCC72b6fd3cca5cA79a7783D4541";
 const abi = contract.abi;
 
 function App() {
 
-  const [data, setData] = useState();
   const [currentAccount, setCurrentAccount] = useState(null);
 
   const checkWalletIsConnected = async () => {
@@ -59,7 +58,6 @@ function App() {
 
         console.log("Initialize payment");
         let nftTxn = await nftContract.mintNFTs(1, { value: ethers.utils.parseEther("0.01") });
-        setData("Mining your pepe chest");
         console.log("Mining your pepe chest... please wait");
         await nftTxn.wait();
 
@@ -102,6 +100,8 @@ function App() {
                 <li className='header'><a href="https://twitter.com/pepefrensnft" target="_blank" rel="noopener noreferrer">Twitter</a></li>
                 <li className='header'>🐸</li>
                 <li className='header'><a href="https://discord.gg/6HXKdXXZ" target="_blank"rel="noopener noreferrer">Discord</a></li>
+                <li className='header'>🐸</li>
+                <li className='header'><a href="https://testnets.opensea.io/collection/tepetrenstest" target="_blank"rel="noopener noreferrer">Opensea</a></li>
                 <li className='header'>🐸</li>
         
       <h2 style={{ color: 'darkgreen', fontSize: '60px'}}>Will you be my fren?</h2>
