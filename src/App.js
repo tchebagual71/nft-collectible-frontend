@@ -3,7 +3,7 @@ import './App.css';
 import contract from './contracts/NFTCollectible.json';
 import { ethers } from 'ethers';
 
-const contractAddress = "0xbEc7A867e740cCC72b6fd3cca5cA79a7783D4541";
+const contractAddress = "0x37CA438d8d15E84C1d85289B94F283Ae74050AE5";
 const abi = contract.abi;
 
 function App() {
