@@ -2,6 +2,12 @@ import { useEffect, useState } from 'react';
 import './App.css';
 import contract from './contracts/NFTCollectible.json';
 import { ethers } from 'ethers';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFrog } from '@fortawesome/free-solid-svg-icons'
+import { faHome } from '@fortawesome/free-solid-svg-icons'
+import { faDiscord } from '@fortawesome/free-brands-svg-icons'
+import { faTwitter } from '@fortawesome/free-brands-svg-icons'
+
 
 const contractAddress = "0x37CA438d8d15E84C1d85289B94F283Ae74050AE5";
 const abi = contract.abi;
@@ -95,16 +101,14 @@ function App() {
   return (
     
     <div className='main-app'>
-                <li className='header'><a href="https://www.pepefrens.com/" target="_blank" rel="noopener noreferrer">Website</a></li>
-                <li className='header'>🐸</li>
-                <li className='header'><a href="https://twitter.com/pepefrensnft" target="_blank" rel="noopener noreferrer">Twitter</a></li>
-                <li className='header'>🐸</li>
-                <li className='header'><a href="https://discord.gg/6HXKdXXZ" target="_blank"rel="noopener noreferrer">Discord</a></li>
-                <li className='header'>🐸</li>
-                <li className='header'><a href="https://testnets.opensea.io/collection/tepetrenstest" target="_blank"rel="noopener noreferrer">Opensea</a></li>
-                <li className='header'>🐸</li>
-        
+      <div className='header'>   
+        <li><a href="https://www.pepefrens.com/" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faHome} size="3x" /></a>PepeFrens.com</li>    
+        <li><a href="https://twitter.com/pepefrensnft" target="_blank" rel="noopener noreferrer"><FontAwesomeIcon icon={faTwitter} size="3x" /></a>@pepefrensnft</li>
+        <li><a href="https://discord.gg/6HXKdXXZ" target="_blank"rel="noopener noreferrer"><FontAwesomeIcon icon={faDiscord} size="3x" /></a>Find Frens</li>
+        <li><a href="https://opensea.io/collection/pepefrens" target="_blank"rel="noopener noreferrer"><FontAwesomeIcon icon={faFrog} size="3x"/></a>The Collection</li> 
+        </div>   
       <h2 style={{ color: 'darkgreen', fontSize: '60px'}}>Will you be my fren?</h2>
+
       <div>
         {currentAccount ? mintNftButton() : connectWalletButton()}
       </div>
